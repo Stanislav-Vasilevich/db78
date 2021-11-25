@@ -1,0 +1,20 @@
+.header {
+  height: 51px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background:#27282C;
+}
+
+.header .container {
+  display: flex;
+  background:#27282C;
+  color: #B6B6B6;
+}
+
+.header nav a {
+  background:#27282C;
+  color: #B6B6B6;
+  text-decoration: none;
+}
