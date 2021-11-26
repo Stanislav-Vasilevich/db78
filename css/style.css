@@ -1,6 +1,12 @@
 /* normalize */
 @import url('./normalize.css');
 
+/* fonts */
+@import url('./../fonts/fonts.css');
+
+/* default */
+@import url('./default.css');
+
 /* header */
 @import url('./header.css');
 

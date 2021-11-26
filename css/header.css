@@ -1,20 +1,67 @@
 .header {
-  height: 51px;
+  height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background:#27282C;
 }
 
 .header .container {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   background:#27282C;
   color: #B6B6B6;
 }
 
-.header nav a {
+.header .logo {
+  font-weight: bold;
+  color: white;
+}
+
+.header nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .link {
   background:#27282C;
   color: #B6B6B6;
   text-decoration: none;
+  position: relative;
+}
+
+.header .link::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #DC1313;
+  transition: .4s all;
+}
+
+.header .link:hover::before {
+  width: 100%;
+}
+
+.header .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.header .icon {
+  width: 20px;
+  cursor: pointer;
+  transition: .6s;
+}
+
+.header .icon img:hover {
+  color: red;
 }
