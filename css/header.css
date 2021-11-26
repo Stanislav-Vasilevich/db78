@@ -11,12 +11,14 @@
   align-items: center;
   justify-content: space-around;
   background:#27282C;
-  color: #B6B6B6;
 }
 
 .header .logo {
   font-weight: bold;
   color: white;
+  border-right: 1px solid #DC1313;
+  border-bottom: 1px solid #DC1313;
+  padding: 0 3px 0 0;
 }
 
 .header nav {
