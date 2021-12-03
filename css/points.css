@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto&display=swap');
+
+.points {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  right: calc(50% - 700px);
+  top: 40%;
+  transform: translateY(-40%);
+  list-style-type: none;
+  color: #A4A4A4;
+}
+
+.points li {
+  margin: 0 0 40px 0;
+}
+
+.points .active::before {
+  content: '';
+  display: block;
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -19px;
+  width: 15px;
+  height: 15px;
+}
+
+.points .active::after {
+  content: '';
+  display: block;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: -13px;
+  width: 5px;
+  height: 5px;
+}
+
+.point {
+  position: relative;
+}
+
+.point::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: -14px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+}
