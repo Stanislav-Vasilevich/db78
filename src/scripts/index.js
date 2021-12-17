@@ -1,18 +1,28 @@
-const point = document.querySelectorAll('.points li');
+const menu = document.querySelector('.menu');
+const hamburger = document.querySelector('.hamburger');
+const point = document.querySelector('.menu__close');
+const iconCart = document.querySelector('.icon__cart');
 
-// const elem = document.querySelector('.scroll');
+// открыть мобильное меню
+hamburger.addEventListener('click', () => {
+  menu.classList.add('menu_active');
+});
 
-// document.addEventListener('scroll', function() {
-//   const posTop = elem.getBoundingClientRect().top;
-  
-//   // Блок достиг верхней границы экрана (или выше)
-//   // elem.classList.toggle('visible', posTop <= 0);
-  
-//   // Блок только появляется снизу (или выше)
-//   // elem.classList.toggle('visible', posTop < window.innerHeight);
-  
-//   // Блок целиком находится в видимой зоне
-//   // elem.classList.toggle('visible', posTop + elem.clientHeight <= window.innerHeight && posTop >= 0);
+// закрыть мобильное меню
+point.addEventListener('click', () => {
+  menu.classList.remove('menu_active');
+});
 
-//   console.log('posTop: ', posTop);
-// });
+// меняю иконку корзины по нажатию
+iconCart.addEventListener('click', () => {
+  // получаю src иконки
+  const icon = iconCart.querySelector('img');
+
+  if(!icon.classList.contains('cart')) {
+    icon.setAttribute('src', './../img/icons/cart-full.png');
+    icon.classList.add('cart');
+  } else {
+    icon.classList.remove('cart');
+    icon.setAttribute('src', './../img/icons/cart.png');
+  }
+});

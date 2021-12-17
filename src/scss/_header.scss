@@ -4,11 +4,17 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	&__container {
+		background: rgb(39 40 44 / 33%);
+		padding: 0 30px;
+	}
 	.container {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
-		background: #27282C;
+		justify-content: space-between;
+	}
+	.hamburger {
+		display: none;
 	}
 	.logo {
 		font-weight: bold;
@@ -18,16 +24,18 @@
 		padding: 0 3px 0 0;
 	}
 	.menu {
-		width: 50%;
 		display: flex;
 		justify-content: space-between;
     color: white;
+		.menu__close {
+			display: none;
+		}
     .menu__item {
-      color: white;
+      color: #b6b6b6;
+			padding: 10px 18px;
     }
 	}
 	.link {
-		background: #27282C;
 		color: #B6B6B6;
 		text-decoration: none;
 		position: relative;
@@ -49,13 +57,12 @@
 		}
 	}
 	.icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: inline-block;
 		width: 30px;
 		height: 30px;
 		cursor: pointer;
 		transition: .6s;
+		margin: 10px;
 		img {
 			width: 25px;
 		  height: 25px;
@@ -70,10 +77,35 @@
 
 @media screen and (max-width: 992px) {
 	.header {
+		.hamburger {
+			display: flex;
+  		flex-direction: column;
+  		justify-content: space-between;
+  		height: 50px;
+  		width: 40px;
+  		cursor: text;
+  		padding: 10px 10px 10px 0;
+			span:nth-child(odd) {
+				color: white;
+  			font-size: 12px;
+  			line-height: 12px;
+  			border-right: 1px solid red;
+  			border-bottom: 3px solid #DC1313;
+  			padding: 0;
+			}
+			span:nth-child(2) {
+				width: 25px;
+  			height: 2px;
+  			background: red;
+			}
+		}
+		.logo {
+			display: none;
+		}
     .menu {
       position: absolute;
       top: 0;
-      left: 0;
+      left: -90vw;
       flex-direction: column;
       align-items: center;
       width: 90vw;
@@ -85,6 +117,27 @@
       text-transform: uppercase;
       padding: 50px;
       z-index: 1;
+			transition: .4s all;
+			.menu__close {
+				display: block;
+				position: absolute;
+				top: 10px;
+				left: 25px;
+				font-size: 60px;
+				z-index: 1;
+			}
+			&_active {
+				top: 0;
+				left: 0;
+			}
     }
+  }
+}
+
+@media screen and (max-width: 414px) {
+	.header {
+		&__phone {
+			font-size: 12px;
+		}
   }
 }
