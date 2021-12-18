@@ -1,38 +1,37 @@
 .first {
-	position: relative;
-	height: 100vh;
-	width: 100%;
-	&__row {
-		width: 100%;
-		height: 901px;
-		background-image: url('./../img/first/bg.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		padding: 186px 103px 116px 135px;
-	}
-	&__content {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&__utp {
-		min-width: 486px;
-	}
-	&__image {
-		width: 100%;
-		img {
-			width: 100%;
-		}
-	}
-	.red-line {
-		width: 47px;
-		height: 2px;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  &__row {
+    width: 100%;
+    background-image: url('./../img/first/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 186px 103px 116px 135px;
+  }
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__utp {
+    min-width: 486px;
+  }
+  &__image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .red-line {
+    width: 47px;
+    height: 2px;
     margin: 0 0 35px 0;
-		background: #DC1313;
-	}
+    background: #dc1313;
+  }
   h1 {
     line-height: 52px;
     margin: 0 0 90px 0;
@@ -40,17 +39,54 @@
 }
 
 @media screen and (max-width: 1280px) {
-	.first {
-		&__row {
-			height: 800px;
-			padding: 186px 50px 116px 80px;
-		}
-		&__utp {
-			min-width: 350px;
-			h1 {
-				font-size: 37px;
-				line-height: 43px;
-			}
-		}
-	}
+  .first {
+    &__row {
+      padding: 186px 50px 116px 80px;
+    }
+    &__utp {
+      min-width: 350px;
+      h1 {
+        font-size: 37px;
+        line-height: 43px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .first {
+    &__row {
+      padding: 150px 50px 110px;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    &__utp {
+      order: 2;
+    }
+    &__image {
+      order: 1;
+      text-align: center;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .first {
+    &__image {
+      width: 100%;
+    }
+    &__row {
+      padding: 100px 30px 70px;
+    }
+    &__utp {
+      min-width: 100%;
+      h1 {
+        font-size: 27px;
+        line-height: 37px;
+				margin: 0 0 60px;
+      }
+    }
+  }
 }
