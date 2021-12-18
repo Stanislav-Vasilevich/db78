@@ -1,40 +1,12 @@
 ## Ширина экрана
 ```css
-@media screen and (max-width: 1400px) {
-	.container {
-		width: 1280px;
-	}
-}
-@media screen and (max-width: 1280px) {
-	.container {
-		width: 1140px;
-	}
-}
-@media screen and (max-width: 1140px) {
-	.container {
-		width: 1024px;
-	}
-}
-@media screen and (max-width: 1024px) {
-	.container {
-		width: 992px;
-	}
-}
-@media screen and (max-width: 992px) {
-	.container {
-		width: 100%;
-	}
-}
-@media screen and (max-width: 768px) {
-	.container {
-		width: 100%;
-	}
-}
-@media screen and (max-width: 576px) {
-	.container {
-		width: 100%;
-	}
-}
+@media screen and (max-width: 1400px) {}
+@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1140px) {}
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 992px) {}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 576px) {}
 ```
 
 # Сборка проекта на Gulp 4
