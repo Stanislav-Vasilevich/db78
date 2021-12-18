@@ -1,6 +1,6 @@
 ## Ширина экрана
 ```css
-  @media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
 	.container {
 		width: 1280px;
 	}
