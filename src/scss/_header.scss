@@ -199,6 +199,11 @@
         font-size: 60px;
         z-index: 1;
       }
+      &__item {
+        &::before {
+          display: none;
+        }
+      }
       &_active {
         top: 0;
         left: 0;
