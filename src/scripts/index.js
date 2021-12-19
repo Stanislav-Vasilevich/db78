@@ -2,6 +2,12 @@ const menu = document.querySelector('.menu');
 const hamburger = document.querySelector('.hamburger');
 const point = document.querySelector('.menu__close');
 const iconCart = document.querySelector('.icon__cart');
+const numIconCart = iconCart.querySelector('span');
+const iconWhatsApp = document.querySelector('.icon__whatsapp');
+const whatsAppText = iconWhatsApp.querySelector('.whatsapp');
+const points = document.querySelectorAll('.point');
+
+console.log(whatsAppText);
 
 // открыть мобильное меню
 hamburger.addEventListener('click', () => {
@@ -18,11 +24,29 @@ iconCart.addEventListener('click', () => {
   // получаю src иконки
   const icon = iconCart.querySelector('img');
 
-  if(!icon.classList.contains('cart')) {
+  // корзина полная с цифрой или пустая
+  if (!icon.classList.contains('cart')) {
     icon.setAttribute('src', './../img/icons/cart-full.png');
     icon.classList.add('cart');
+    iconCart.classList.add('icon__cart_active');
+    numIconCart.style.display = 'block';
   } else {
     icon.classList.remove('cart');
     icon.setAttribute('src', './../img/icons/cart.png');
+    iconCart.classList.remove('icon__cart_active');
+    numIconCart.style.display = 'none';
   }
+});
+
+// открыть WhatsApp
+iconWhatsApp.addEventListener('click', () => {
+  whatsAppText.classList.toggle('whatsapp_active');
+})
+
+// поставить point
+points.forEach((i) => {
+  i.addEventListener('click', () => {
+    points.forEach(p => p.classList.remove('active'));
+    i.classList.add('active');
+  })
 });
