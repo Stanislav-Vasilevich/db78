@@ -1,6 +1,6 @@
 .first {
   position: relative;
-  height: 100vh;
+  min-height: 850px;
   width: 100%;
   &__row {
     width: 100%;
@@ -21,7 +21,7 @@
     min-width: 486px;
   }
   &__template {
-    
+
   }
   &__title {
     display: inline;
