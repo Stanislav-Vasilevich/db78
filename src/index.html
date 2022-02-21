@@ -49,7 +49,8 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body>
+<body class="body">
+  <div class="background"></div>
   <div class="container">
     <!-- first section -->
     <section class="first">
@@ -129,25 +130,39 @@
     </section>
 
     <!-- Секция изделий -->
-    <section class="goods">
-      <h2 class="title"><span class="goods__title">Что мы </span><br>производим</h2>
+    <section id="goods" class="goods">
+      <h2 class="title goods__title"><span>Что мы </span><br>производим</h2>
       <ul class="goods__list">
-        <li class="goods__item">
+        <li class="goods__item goods__item-1">
           <img src="./img/goods/goods-1.jpg" alt="">
         </li>
-        <li class="goods__item">
+        <li class="goods__item goods__item-2">
           <img src="./img/goods/goods-2.jpg" alt="">
         </li>
-        <li class="goods__item">
+        <li class="goods__item goods__item-3">
           <img src="./img/goods/goods-3.jpg" alt="">
         </li>
-        <li class="goods__item">
+        <li class="goods__item goods__item-text">
+          <ol class="goods__names">
+            <li class="goods__name goods__name_active">Отливы</li>
+            <li class="goods__name">Парапеты</li>
+            <li class="goods__name">Дымники</li>
+            <li class="goods__name">Колпаки</li>
+            <li class="goods__name">Откосы</li>
+            <li class="goods__name">Нащельники</li>
+            <li class="goods__name">Стартовый профиль</li>
+            <li class="goods__name">Капельники</li>
+            <li class="goods__name">Ендовы</li>
+            <li class="goods__name">Коньки кровли</li>
+          </ol>
+        </li>
+        <li class="goods__item goods__item-4">
           <img src="./img/goods/goods-4.jpg" alt="">
         </li>
-        <li class="goods__item">
+        <li class="goods__item goods__item-5">
           <img src="./img/goods/goods-5.jpg" alt="">
         </li>
-        <li class="goods__item">
+        <li class="goods__item goods__item-6">
           <img src="./img/goods/goods-6.jpg" alt="">
         </li>
       </ul>

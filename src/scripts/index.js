@@ -6,8 +6,9 @@ const numIconCart = iconCart.querySelector('span');
 const iconWhatsApp = document.querySelector('.icon__whatsapp');
 const whatsAppText = iconWhatsApp.querySelector('.whatsapp');
 const points = document.querySelectorAll('.point');
-
-console.log(whatsAppText);
+const goodsNames = document.querySelectorAll('.goods__name');
+const first = document.querySelector('.first');
+const goods = document.querySelector('.goods');
 
 // открыть мобильное меню
 hamburger.addEventListener('click', () => {
@@ -50,3 +51,17 @@ points.forEach((i) => {
     i.classList.add('active');
   })
 });
+
+// поставить goodsNames
+goodsNames.forEach((i) => {
+  i.addEventListener('click', () => {
+    goodsNames.forEach(p => p.classList.remove('goods__name_active'));
+    i.classList.add('goods__name_active');
+  })
+});
+
+// скролл сайта и изменение points
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 790)
+  console.log('hello');
+})
