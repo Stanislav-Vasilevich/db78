@@ -50,124 +50,132 @@
 </head>
 
 <body class="body">
-  <div class="background"></div>
-  <div class="container">
-    <!-- first section -->
-    <section class="first">
-      <!-- header -->
-      <header class="header">
-        <div class="header__row">
-          <!-- hamburger -->
-          <div class="hamburger">
-            <span>db78</span>
-            <span></span>
-            <span></span>
-          </div>
-          <!-- logo -->
-          <div class="logo"><span data-content="db78" aria-hidden="true"></span>db78</div>
-          <!-- menu -->
-          <nav class="menu">
-            <div class="menu__close">&times;</div>
-            <a class="menu__item" href="#">Главная</a>
-            <a class="menu__item" href="#">Металлопрокат</a>
-            <a class="menu__item" href="#">Гибка</a>
-            <a class="menu__item" href="#">Услуги</a>
-            <a class="menu__item" href="#">Контакты</a>
-          </nav>
-          <!-- cart and whatsApp -->
-          <div class="feedback">
-            <div class="icon icon__cart">
-              <img src="./img/icons/cart.png" alt="">
-              <span class="hidden">2</span>
+  <main class="main">
+    <div class="container">
+      <!-- first section -->
+      <section id="first" class="first section">
+        <!-- header -->
+        <header class="header">
+          <div class="header__row">
+            <!-- hamburger -->
+            <div class="hamburger">
+              <span>db78</span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="icon icon__whatsapp">
-              <img src="./img/icons/whatsapp.png" alt="">
-              <a class="whatsapp" href="https://wa.me/79216518208">написать</a>
+            <!-- logo -->
+            <div class="logo"><span data-content="db78" aria-hidden="true"></span>db78</div>
+            <!-- menu -->
+            <nav class="menu">
+              <div class="menu__close">&times;</div>
+              <a class="menu__item" href="#first">Главная</a>
+              <a class="menu__item" href="#goods">Гибка</a>
+              <a class="menu__item" href="#metal-products">Металлопрокат</a>
+              <a class="menu__item" href="#services">Услуги</a>
+              <a class="menu__item" href="#contacts">Контакты</a>
+            </nav>
+            <!-- cart and whatsApp -->
+            <div class="feedback">
+              <div class="icon icon__cart">
+                <img src="./img/icons/cart.png" alt="">
+                <span class="hidden">2</span>
+              </div>
+              <div class="icon icon__whatsapp">
+                <img src="./img/icons/whatsapp.png" alt="">
+                <a class="whatsapp" href="https://wa.me/79216518208">написать</a>
+              </div>
             </div>
+            <!-- phone -->
+            <a class="header__phone link" href="tel:+79216518208">+7 (921) 651-82-08</a>
           </div>
-          <!-- phone -->
-          <a class="header__phone link" href="tel:+79216518208">+7 (921) 651-82-08</a>
-        </div>
-      </header>
+        </header>
 
-      <!-- contеnt first section -->
-      <div class="first__row">
-        <div class="first__content">
-          <div class="first__utp">
-            <div class="red-line"></div>
-            <div class="first__title">Привет!<br></div>
-            <div class="first__title first__title_block">Это&nbsp;<h1 class="first__title">производство изделий из жести
+        <!-- contеnt first section -->
+        <div class="first__row">
+          <div class="first__content">
+            <div class="first__utp">
+              <div class="red-line"></div>
+              <div class="first__title">Привет!</div>
+              <div class="first__title first__title_block"><span>Это</span>&nbsp;<h1 class="first__title">производство изделий из жести
               </h1>
+              </div>
+              <a class="btn" href="#">подробнее</a>
             </div>
-            <a class="btn" href="#">подробнее</a>
-          </div>
-          <div class="first__image">
-            <img src="./img/first/outflow.png" alt="Отлив из оцинкованной стали">
+            <div class="first__image">
+              <img src="./img/first/outflow.png" alt="Отлив из оцинкованной стали">
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <ul class="points">
-        <li>
-          <span class="point">&#8213; &#160;01</span>
-        </li>
-        <li>
-          <span class="point">&#8213; &#160;02</span>
-        </li>
-        <li>
-          <span class="point">&#8213; &#160;04</span>
-        </li>
-        <li>
-          <span class="point">&#8213; &#160;05</span>
-        </li>
-        <li>
-          <span class="point">&#8213; &#160;06</span>
-        </li>
-        <li>
-          <span class="point">&#8213; &#160;07</span>
-        </li>
-      </ul>
-    </section>
+      <!-- Секция изделий -->
+      <section id="goods" class="goods section">
+        <h2 class="title goods__title"><span>Что мы </span><br>производим</h2>
+        <ul class="goods__list">
+          <li class="goods__item goods__item-1">
+            <img src="./img/goods/goods-1.jpg" alt="">
+          </li>
+          <li class="goods__item goods__item-2">
+            <img src="./img/goods/goods-2.jpg" alt="">
+          </li>
+          <li class="goods__item goods__item-3">
+            <img src="./img/goods/goods-3.jpg" alt="">
+          </li>
+          <li class="goods__item goods__item-text">
+            <ol class="goods__names">
+              <li class="goods__name goods__name_active">Отливы</li>
+              <li class="goods__name">Парапеты</li>
+              <li class="goods__name">Дымники</li>
+              <li class="goods__name">Колпаки</li>
+              <li class="goods__name">Откосы</li>
+              <li class="goods__name">Нащельники</li>
+              <li class="goods__name">Стартовый профиль</li>
+              <li class="goods__name">Капельники</li>
+              <li class="goods__name">Ендовы</li>
+              <li class="goods__name">Коньки кровли</li>
+              <li class="goods__name">Уголки</li>
+            </ol>
+          </li>
+          <li class="goods__item goods__item-4">
+            <img src="./img/goods/goods-4.jpg" alt="">
+          </li>
+          <li class="goods__item goods__item-5">
+            <img src="./img/goods/goods-5.jpg" alt="">
+          </li>
+          <li class="goods__item goods__item-6">
+            <img src="./img/goods/goods-6.jpg" alt="">
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
 
-    <!-- Секция изделий -->
-    <section id="goods" class="goods">
-      <h2 class="title goods__title"><span>Что мы </span><br>производим</h2>
-      <ul class="goods__list">
-        <li class="goods__item goods__item-1">
-          <img src="./img/goods/goods-1.jpg" alt="">
-        </li>
-        <li class="goods__item goods__item-2">
-          <img src="./img/goods/goods-2.jpg" alt="">
-        </li>
-        <li class="goods__item goods__item-3">
-          <img src="./img/goods/goods-3.jpg" alt="">
-        </li>
-        <li class="goods__item goods__item-text">
-          <ol class="goods__names">
-            <li class="goods__name goods__name_active">Отливы</li>
-            <li class="goods__name">Парапеты</li>
-            <li class="goods__name">Дымники</li>
-            <li class="goods__name">Колпаки</li>
-            <li class="goods__name">Откосы</li>
-            <li class="goods__name">Нащельники</li>
-            <li class="goods__name">Стартовый профиль</li>
-            <li class="goods__name">Капельники</li>
-            <li class="goods__name">Ендовы</li>
-            <li class="goods__name">Коньки кровли</li>
-          </ol>
-        </li>
-        <li class="goods__item goods__item-4">
-          <img src="./img/goods/goods-4.jpg" alt="">
-        </li>
-        <li class="goods__item goods__item-5">
-          <img src="./img/goods/goods-5.jpg" alt="">
-        </li>
-        <li class="goods__item goods__item-6">
-          <img src="./img/goods/goods-6.jpg" alt="">
-        </li>
-      </ul>
-    </section>
-  </div>
+<!--  background-->
+  <div class="background"></div>
+
+<!--  points-->
+  <nav class="points nav">
+    <ul>
+      <li>
+        <a class="point active" href="#first">&#8213; &#160;01</a>
+      </li>
+      <li>
+        <a class="point" href="#goods">&#8213; &#160;02</a>
+      </li>
+      <li>
+        <span class="point">&#8213; &#160;04</span>
+      </li>
+      <li>
+        <span class="point">&#8213; &#160;05</span>
+      </li>
+      <li>
+        <span class="point">&#8213; &#160;06</span>
+      </li>
+      <li>
+        <span class="point">&#8213; &#160;07</span>
+      </li>
+    </ul>
+  </nav>
 
   <script src="./js/main.min.js"></script>
 </body>

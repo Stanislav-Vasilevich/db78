@@ -59,9 +59,3 @@ goodsNames.forEach((i) => {
     i.classList.add('goods__name_active');
   })
 });
-
-// скролл сайта и изменение points
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 790)
-  console.log('hello');
-})
