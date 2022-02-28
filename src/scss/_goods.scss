@@ -104,3 +104,142 @@
     }
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .goods {
+    padding: 85px 211px 125px 0;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .goods {
+    padding: 40px 80px;
+    &__title {
+      margin: 0 0 80px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 280px);
+      grid-template-rows: repeat(7, 210px);
+      gap: 11px;
+      grid-template-areas:
+      'one . .'
+      'one two text'
+      'three two text'
+      'three four five'
+      '. four five'
+      '. . six'
+      '. . six';
+    }
+  }
+}
+@media screen and (max-width: 1140px) {
+  .goods {
+    padding: 20px 50px;
+    &__title {
+      margin: 0 0 40px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 280px);
+      grid-template-rows: repeat(7, 210px);
+      gap: 11px;
+      grid-template-areas:
+      'one . .'
+      'one two text'
+      'three two text'
+      'three four .'
+      'five four .'
+      'five six .'
+      '. six .';
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .goods {
+    padding: 20px 50px;
+    &__title {
+      margin: 0 0 40px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 280px);
+      grid-template-rows: repeat(8, 210px);
+      gap: 11px;
+      grid-template-areas:
+      'one .'
+      'one text'
+      'two text'
+      'two three'
+      'four three'
+      'four five'
+      'six five'
+      'six .';
+    }
+    &__item-5 {
+      display: none;
+    }
+    &__item-6 {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .goods {
+    padding: 20px 50px;
+    &__title {
+      margin: 0 0 40px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 280px);
+      grid-template-rows: repeat(8, 210px);
+      gap: 11px;
+      grid-template-areas:
+      'one .'
+      'one text'
+      'two text'
+      'two .'
+      'three .'
+      'three .'
+      'four .'
+      'four .';
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .goods {
+    padding: 0 30px;
+    &__title {
+      margin: 0 0 20px;
+      font-size: 57px;
+      line-height: 57px;
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(1, 280px);
+      grid-template-rows: repeat(10, 210px);
+      gap: 11px;
+      grid-template-areas:
+      'one'
+      'one'
+      'text'
+      'text'
+      'two'
+      'two'
+      'three'
+      'three'
+      'four'
+      'four';
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  .goods {
+    padding: 10px;
+    &__title {
+      margin: 0 0 40px;
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+}
