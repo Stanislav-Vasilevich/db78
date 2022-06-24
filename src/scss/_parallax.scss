@@ -1,0 +1,37 @@
+.parallax {
+  &__group {
+    position: relative;
+    min-height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  &__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &__layer-base {
+    transform: translateZ(0);
+    z-index: 4;
+    &_galvanization {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__title {
+    flex: 1 0 650px;
+    font-size: 94px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #101010;
+  }
+  &__subtitle {
+    flex: 1 0 550px;
+    margin: 0 0 0 56px;
+  }
+}
