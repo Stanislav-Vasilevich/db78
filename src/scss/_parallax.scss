@@ -1,37 +1,99 @@
 .parallax {
   &__group {
     position: relative;
-    min-height: 100vh;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    overflow-y: scroll;
-    overflow-x: hidden;
   }
-  &__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  &__layer-back {
+    transform-origin: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    &_galvanization {
+      background-image: url("./../img/parallax/galvan.jpg");
+    }
+    &_painted {
+      background-image: url('./../img/parallax/color.jpg');
+    }
+    &_stainless {
+      background-image: url('./../img/parallax/stainless.jpg');
+    }
   }
   &__layer-base {
-    transform: translateZ(0);
-    z-index: 4;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: .9;
+    z-index: 2;
     &_galvanization {
+      min-height: 280px;
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 60px 75px;
+    }
+    &_painted, &_stainless {
+      width: 100%;
+      min-height: 365px;
+      display: block;
+      padding: 67px 0;
+    }
+    &_stainless {
+      padding: 67px 0 67px 50px;
+    
     }
   }
   &__title {
     flex: 1 0 650px;
+    font-weight: 700;
     font-size: 94px;
     line-height: 125%;
     text-transform: uppercase;
     color: #101010;
+    &_painted {
+      text-align: center;
+    }
   }
   &__subtitle {
-    flex: 1 0 550px;
+    flex: 1 1 542px;
+    font-size: 18px;
+    line-height: 140%;
+    color: #676767;
+    text-align: center;
     margin: 0 0 0 56px;
+    max-width: 540px;
+    &_painted {
+      margin: 0 auto;
+    }
+    &_stainless {
+      margin: 0;
+      text-align: start;
+    }
+  }
+  &__more {
+    display: block;
+    font-size: 16px;
+    line-height: 163%;
+    text-decoration-line: underline;
+    text-transform: lowercase;
+    color: #DC1313;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .parallax {
+    &__layer-base {
+      &_galvanization {
+        display: block;
+      }
+    }
+    &__subtitle {
+      &_galvanization {
+        margin: 0;
+        text-align: start;
+      }
+     
+    }
   }
 }
