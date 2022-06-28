@@ -35,16 +35,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 60px 75px;
+      padding: 30px 75px;
     }
     &_painted, &_stainless {
       width: 100%;
       min-height: 365px;
       display: block;
-      padding: 67px 0;
+      padding: 40px 0;
     }
     &_stainless {
-      padding: 67px 0 67px 50px;
+      padding: 40px 0 40px 50px;
     
     }
   }
@@ -97,7 +97,35 @@
         margin: 0;
         text-align: start;
       }
-     
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .parallax {
+    &__title {
+      font-size: 60px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .parallax {
+    &__layer-back {
+      height: calc(100vh - 290px);
+    }
+    &__layer-base {
+      min-height: 290px;
+      padding: 30px 10px;
+    }
+    &__title {
+      font-size: 35px;
+      text-align: center;
+    }
+    &__subtitle {
+      font-size: 16px;
+      max-width: 310px;
+      margin: 0 auto;
+      text-align: center;
     }
   }
 }
