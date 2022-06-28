@@ -2,4 +2,17 @@
   font-size: 85px;
   line-height: 60px;
   color: #EBEBEB;
+  &_black {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 53px;
+    color: #101010;
+  }
 }
+
+// @media screen and (max-width: 1280px) {
+//   .title {
+
+//   }
+// }
+
