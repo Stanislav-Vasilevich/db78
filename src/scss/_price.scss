@@ -1,0 +1,64 @@
+.price {
+  position: relative;
+  min-height: 800px;
+  width: 100%;
+  background-image: url('./../img/price/bgprice.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  &__wrap {
+    position: absolute;
+    top: 25%;
+    left: 12%;
+  }
+  &__logo {
+    font-size: 20px;
+    line-height: 19px;
+    color: #DC1313;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    span {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 38px;
+    }
+  }
+  &__h4 {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 36px;
+    color: #292929;
+    margin-bottom: 20px;
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 163%;
+    color: #1E1E1E;
+    margin-bottom: 30px;
+  }
+  &__btn {
+    display: block;
+    width: 245px;
+    height: 36px;
+    background: #DC1313;
+    font-size: 16px;
+    text-align: center;
+    color: #FFF;
+    transition: 1s all;
+    &:hover {
+      color: #DC1313;
+      background: #FFF;
+      border: 3px solid #DC1313;
+      transform: scale(1.1);
+    }
+    
+  }
+
+
+  &__img {
+    position: absolute;
+    bottom: 34%;
+    right: 25%;
+    opacity: .9;
+  }
+}
