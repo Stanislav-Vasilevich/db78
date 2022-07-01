@@ -51,14 +51,15 @@
       border: 3px solid #DC1313;
       transform: scale(1.1);
     }
-    
   }
-
-
   &__img {
     position: absolute;
     bottom: 34%;
     right: 25%;
     opacity: .9;
   }
+}
+
+@media screen and (max-width: 1400px) {
+  
 }
