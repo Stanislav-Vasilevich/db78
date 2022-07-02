@@ -54,12 +54,48 @@
   }
   &__img {
     position: absolute;
-    bottom: 34%;
-    right: 25%;
+    bottom: 31%;
+    right: 22%;
     opacity: .9;
+    img {
+      max-width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 1400px) {
-  
+  .price {
+    &__img {
+      right: 9%;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .price {
+    &__img {
+      right: 0%;
+      img {
+        padding: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .price {
+    height: 100vh;
+    &__wrap {
+      top: 15%;
+    }
+    &__img {
+      bottom: 10%;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .price {
+    &__img {
+      bottom: 5%;
+    }
+  }
 }
