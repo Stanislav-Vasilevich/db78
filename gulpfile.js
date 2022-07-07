@@ -21,6 +21,10 @@ const paths = {
     src: ['src/*.html'],
     dest: 'dist/'
   },
+  allHTML: {
+    src: ['src/page/**/*.html'],
+    dest: 'dist/page/'
+  },
   styles: {
     src: ['src/scss/**/*.sass', 'src/scss/**/*.scss', 'src/scss/**/*.css'],
     dest: 'dist/css/'
@@ -52,6 +56,17 @@ function html() {
     showFiles:true
   }))
   .pipe(gulp.dest(paths.html.dest))
+  .pipe(browsersync.stream())
+}
+
+// HTML
+function allHTML() {
+  return gulp.src(paths.allHTML.src)
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(size({
+    showFiles:true
+  }))
+  .pipe(gulp.dest(paths.allHTML.dest))
   .pipe(browsersync.stream())
 }
 
@@ -127,6 +142,7 @@ function watch() {
   })
   gulp.watch(paths.html.dest).on('change', browsersync.reload)
   gulp.watch(paths.html.src, html)
+  gulp.watch(paths.allHTML.src, allHTML)
   gulp.watch(paths.styles.src, styles)
   gulp.watch(paths.scripts.src, scripts)
   gulp.watch(paths.images.src, img)
@@ -136,6 +152,7 @@ function watch() {
 // Таски для ручного запуска с помощью gulp clean, gulp html и т.д.
 exports.clean = clean
 exports.html = html
+exports.allHTML = allHTML
 exports.styles = styles
 exports.scripts = scripts
 exports.img = img
@@ -143,4 +160,4 @@ exports.fonts = fonts
 exports.watch = watch
 
 // Таск, который выполняется по команде gulp
-exports.default = gulp.series(clean, html, gulp.parallel(styles, scripts, img, fonts), watch)
+exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, img, fonts), watch)

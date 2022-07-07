@@ -1,22 +1,33 @@
 @import 'https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto&display=swap';
+
 .points {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
   font-family: 'Roboto', sans-serif;
   position: fixed;
   right: 50%;
   top: 50%;
-  transform: translate(calc(-50% + 720px), calc(-50% + 70px));
+  transform: translate(calc(-50% + 820px), calc(-50% + 70px));
   list-style-type: none;
   color: #a4a4a4;
+  background: linear-gradient(270deg, #18191C 0%, rgba(0, 0, 0, 0) 77.83%);
+  padding: 40px 0;
+  z-index: 3;
   li {
 		position: relative;
     margin: 0 0 60px 0;
+
+    &:last-of-type {
+      margin: 0;
+    }
   }
 }
 
 .point {
   color: white;
   transition: .4s all;
-  padding: 20px 20px 20px 6px;
+  padding: 20px 38px 20px 6px;
   &:hover {
     color: red;
     cursor: pointer;

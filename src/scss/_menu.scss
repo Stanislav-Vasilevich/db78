@@ -9,6 +9,11 @@
     position: relative;
     color: #b6b6b6;
     padding: 10px 30px;
+
+    &_active {
+      border-bottom: 1px solid red;
+    }
+
     &::before {
       content: '';
       position: absolute;

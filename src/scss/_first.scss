@@ -1,6 +1,5 @@
 .first {
   position: relative;
-  //min-height: 850px;
   width: 100%;
   &__row {
     width: 100%;
@@ -18,7 +17,7 @@
     align-items: center;
   }
   &__utp {
-    min-width: 486px;
+    min-width: 540px;
   }
   &__title {
     display: inline;

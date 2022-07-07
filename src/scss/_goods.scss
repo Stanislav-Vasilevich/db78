@@ -70,6 +70,9 @@
   &__name {
     position: relative;
     list-style: decimal;
+    a {
+      color: #797979;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -84,6 +87,9 @@
       color: white;
       position: relative;
       cursor: pointer;
+      a {
+        color: white;
+      }
       &::before {
         width: 23px;
       }

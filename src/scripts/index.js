@@ -49,13 +49,13 @@ points.forEach((i) => {
   i.addEventListener('click', () => {
     points.forEach(p => p.classList.remove('active'));
     i.classList.add('active');
-  })
+  });
 });
 
-// поставить goodsNames
+// поставить активный класс при клике на доборный элемент во второй секции на главной
 goodsNames.forEach((i) => {
   i.addEventListener('click', () => {
     goodsNames.forEach(p => p.classList.remove('goods__name_active'));
     i.classList.add('goods__name_active');
-  })
+  });
 });
