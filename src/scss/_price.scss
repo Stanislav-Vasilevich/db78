@@ -1,15 +1,15 @@
 .price {
   position: relative;
-  min-height: 800px;
   width: 100%;
   background-image: url('./../img/price/bgprice.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 20px;
-  &__wrap {
-    position: absolute;
-    top: 25%;
-    left: 12%;
+  padding: 200px 150px 150px;
+  &__content {
+    display: flex;
+  }
+  &__left {
+    width: 50%;
   }
   &__logo {
     font-size: 20px;
@@ -53,71 +53,39 @@
     }
   }
   &__img {
-    position: absolute;
-    bottom: 31%;
-    right: 22%;
-    opacity: .9;
+    width: 50%;
     img {
-      max-width: 100%;
+      width: 100%;
     }
   }
   &__text {
-    width: 40%;
     margin: 0 0 30px 0;
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .price {
-    &__img {
-      right: 9%;
-    }
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .price {
-    &__img {
-      right: 0%;
-      img {
-        padding: 15px;
-      }
-    }
-  }
-}
 @media screen and (max-width: 1024px) {
   .price {
-    height: 100vh;
-    &__wrap {
-      top: 15%;
+    padding: 150px 100px;
+    &__left {
+      width: 100%;
     }
     &__img {
-      img {
-        display: none;
-      }
+      display: none;
     }
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .price {
-    &__img {
-      bottom: 5%;
-    }
+    padding: 100px 50px;
   }
 }
 
 @media screen and (max-width: 414px) {
   .price {
-    height: auto;
-    &__wrap {
-      position: relative;
-    }
-    &__text {
-      width: 80%;
-    }
+    padding: 50px 15px;
     &__btn {
-      display: block;
-      padding: 10px 20px;
+      display: inline-block;
+      padding: 15px 30px;
     }
   }
 }

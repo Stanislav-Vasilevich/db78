@@ -52,19 +52,19 @@
 <body class="body">
 <main class="main">
   <div id="container" class="container">
-    <!-- section contacts -->
-    <section class="contacts">
+    <!-- first section -->
+    <section id="first" class="first section">
       <!-- header -->
       <header class="header">
         <div class="header__row">
           <!-- hamburger -->
-          <div class="hamburger">
+          <div class="header__hamburger">
             <span>db78</span>
             <span></span>
             <span></span>
           </div>
           <!-- logo -->
-          <div class="logo">
+          <div class="header__logo">
             <span data-content="db78" aria-hidden="true"></span>
             db78
           </div>
@@ -72,29 +72,59 @@
           <nav class="menu">
             <div class="menu__close">&times;</div>
             <a class="menu__item" href="/">Главная</a>
-            <a class="menu__item" href="#goods">Гибка</a>
-            <a class="menu__item" href="#galvanization">Металлопрокат</a>
-            <a class="menu__item" href="#froze">Услуги</a>
-            <a class="menu__item menu__item_active" href="#">Контакты</a>
+            <a class="menu__item" href="/#goods">Гибка</a>
+            <a class="menu__item" href="/#galvanization">Металлопрокат</a>
+            <a class="menu__item" href="/#froze">Услуги</a>
+            <a class="menu__item" href="./kontakty.html">Контакты</a>
           </nav>
-          <a class="header__phone link" href="tel:+79216518208">+7 (921) 651-82-08</a>
+          <!-- cart and whatsApp -->
+          <div class="header__feedback">
+            <div class="icon icon__cart">
+              <img src="./../img/icons/cart.png" alt="">
+              <span class="hidden">2</span>
+            </div>
+            <div class="icon icon__whatsapp">
+              <img src="./../img/icons/whatsapp.png" alt="">
+              <a class="icon__whatsapp-link" href="https://wa.clck.bar/79216518208">написать</a>
+            </div>
+          </div>
+          <a class="header__phone header__link" href="tel:+79216518208">+7 (921) 651-82-08</a>
         </div>
       </header>
 
-      <!-- content first section -->
-      <div class="first__row">
-        <div class="first__content">
-          <div class="first__utp">
-            <div class="red-line"></div>
-            <div class="first__title">Привет!</div>
-            <div class="first__title first__title_block"><span>Это</span>&nbsp;<h1 class="first__title">гибка<br>
-              доборных элементов
+      <div class="contacts">
+        <div class="contacts__content">
+          <div class="contacts__data">
+            <h1 class="contacts__title">
+              Контакты:
             </h1>
-            </div>
-            <a class="btn" href="#goods">к изделиям</a>
+            <ul class="contacts__list">
+              <li>
+                <span>телефон:</span>
+                +7(921)651-82-08
+              </li>
+              <li>
+                <span>whatsapp:</span>
+                <a href="https://wa.clck.bar/79216518208">+7(921)651-82-08</a>
+              </li>
+              <li>
+                <span>email:</span>
+                db78.ru@yandex.ru
+              </li>
+              <li>
+                <span>адрес:</span>
+                Россия, г. Санкт-петербург, Шоссе Революции, 65А
+              </li>
+              <li>
+                <span>время работы:</span>
+                Пн-сб(10:00-17:00)
+              </li>
+            </ul>
           </div>
-          <div class="first__image">
-            <img src="./img/first/outflow.png" alt="Отлив из оцинкованной стали">
+          <div class="contacts__map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Aea60d7098dc5fd3093e5d3278e650a6244655263e89e11ab6a69f39ab14a1ac1&amp;source=constructor"
+              width="100%" height="400" frameborder="0"></iframe>
           </div>
         </div>
       </div>
@@ -105,6 +135,7 @@
 <!--  background-->
 <div class="background"></div>
 
+<script src="./../js/main.min.js"></script>
 </body>
 
 </html>
