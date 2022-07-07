@@ -25,7 +25,7 @@
   <meta property="og:locale" content="ru_RU">
   <!-- тип контента, по умолчанию используется article -->
   <meta property="og:type" content="article">
-  <!-- заголовок страницы, который будет выводится в записи социальной сети -->
+  <!-- заголовок страницы, который будет выводиться в записи социальной сети -->
   <meta property="og:title" content="">
   <!-- описание страницы -->
   <meta property="og:description" content="">
@@ -43,7 +43,7 @@
   <meta name="twitter:title" content="">
   <!-- Описание страницы -->
   <meta name="twitter:description" content="">
-  <!-- Cсылка на изображение -->
+  <!-- Ссылка на изображение -->
   <meta name="twitter:image" content="">
   <title>Доборные элементы и листовой прокат в Санкт-Петербурге</title>
   <link rel="stylesheet" href="./css/style.min.css">
@@ -58,13 +58,13 @@
       <header class="header">
         <div class="header__row">
           <!-- hamburger -->
-          <div class="hamburger">
+          <div class="header__hamburger">
             <span>db78</span>
             <span></span>
             <span></span>
           </div>
           <!-- logo -->
-          <div class="logo">
+          <div class="header__logo">
             <span data-content="db78" aria-hidden="true"></span>
             db78
           </div>
@@ -78,18 +78,17 @@
             <a class="menu__item" href="./page/kontakty.html">Контакты</a>
           </nav>
           <!-- cart and whatsApp -->
-<!--          <div class="feedback">-->
-<!--            <div class="icon icon__cart">-->
-<!--              <img src="./img/icons/cart.png" alt="">-->
-<!--              <span class="hidden">2</span>-->
-<!--            </div>-->
-<!--            <div class="icon icon__whatsapp">-->
-<!--              <img src="./img/icons/whatsapp.png" alt="">-->
-<!--              <a class="whatsapp" href="https://wa.me/79216518208">написать</a>-->
-<!--            </div>-->
-<!--          </div>-->
-          <!-- phone -->
-          <a class="header__phone link" href="tel:+79216518208">+7 (921) 651-82-08</a>
+          <div class="header__feedback">
+             <div class="icon icon__cart">
+             <img src="./img/icons/cart.png" alt="">
+             <span class="hidden">2</span>
+             </div>
+            <div class="icon icon__whatsapp">
+              <img src="./img/icons/whatsapp.png" alt="">
+              <a class="icon__whatsapp-link" href="https://wa.clck.bar/79216518208">написать</a>
+            </div>
+          </div>
+          <a class="header__phone header__link" href="tel:+79216518208">+7 (921) 651-82-08</a>
         </div>
       </header>
 
@@ -98,10 +97,12 @@
         <div class="first__content">
           <div class="first__utp">
             <div class="red-line"></div>
-            <div class="first__title">Привет!</div>
-            <div class="first__title first__title_block"><span>Это</span>&nbsp;<h1 class="first__title">гибка<br>
-              доборных элементов
-            </h1>
+            <div class="first__title first__title_block">
+              <h1 class="first__title">
+                гибка<br>доборных элементов
+                <span>реализация тонколистового проката</span>
+                <span>порошковая покраска</span>
+              </h1>
             </div>
             <a class="btn" href="#goods">к изделиям</a>
           </div>
@@ -181,8 +182,9 @@
         <div class="parallax__layer-base parallax__layer-base_galvanization">
           <h3 class="parallax__title parallax__title_galvanization">Оцинковка</h3>
           <div class="parallax__subtitle parallax__subtitle_galvanization">
-            По своей сути рыбатекст является альтернативой традиционному lorem ipsum,
-            который вызывает у некторых людей недоумение при попытках прочитать.
+            Оцинкованный тонколистовой металлопрокат самый ходовой товар, поэтому есть большой выбор по толщине.
+            Реализуем прокат как в листах, так и в рулонах, в нарезку на штрипс или гибка готовых изделий. По всем
+            вопросам пишите в whatsapp.
             <!-- <a href="#" class="parallax__more">подробнее</a> -->
             <a href="https://wa.clck.bar/79216518208" class="parallax__more">заказать</a>
           </div>
@@ -191,14 +193,14 @@
     </section>
 
     <!-- секция окрашенная -->
-    <section id="painted" class="painted section parallax">
+    <section class="painted parallax">
       <div class="parallax__group">
         <div class="parallax__layer-back parallax__layer-back_painted"></div>
         <div class="parallax__layer-base parallax__layer-base_painted">
           <h3 class="parallax__title parallax__title_painted">окрашенная</h3>
           <div class="parallax__subtitle parallax__subtitle_painted">
-            По своей сути рыбатекст является альтернативой традиционному lorem ipsum,
-            который вызывает у некторых людей недоумение при попытках прочитат.
+            Мы реализуем листовой прокат с полимерным покрытием в рулонах или листах, также можем нарезать по ширине и
+            длине, все зависит от вашей потребности, для уточнения цвета и цены пишите в ватцап или на почту.
             <!-- <a href="#" class="parallax__more">подробнее</a> -->
             <a href="https://wa.clck.bar/79216518208" class="parallax__more">заказать</a>
           </div>
@@ -207,14 +209,13 @@
     </section>
 
     <!-- секция нержавейка -->
-    <section id="stainless" class="stainless section parallax">
+    <section class="stainless parallax">
       <div class="parallax__group">
         <div class="parallax__layer-back parallax__layer-back_stainless"></div>
         <div class="parallax__layer-base parallax__layer-base_stainless">
           <h3 class="parallax__title">нержавейка</h3>
           <div class="parallax__subtitle parallax__subtitle_stainless">
-            По своей сути рыбатекст является альтернативой традиционному lorem ipsum,
-            который вызывает у некторых людей недоумение при попытках прочитат.
+            Для заказа листового проката из нержавейки пишите нам в ватсап, в наличии есть разные листы и толщина.
             <!-- <a href="#" class="parallax__more">подробнее</a> -->
             <a href="https://wa.clck.bar/79216518208" class="parallax__more">заказать</a>
           </div>
@@ -231,9 +232,11 @@
         </div>
         <div class="froze__description">
           <h3 class="title title_black froze__title"><span>Сделаем</span><br>правильные замеры</h3>
-          <div class="subtitle froze__subtitle">По своей сути рыбатекст является альтернативой традиционному
-            lorem ipsum, который вызывает у некторых людей недоумение
-            при попытках прочитать рыбу текст.
+          <div class="subtitle froze__subtitle">
+            Неправильные замеры это частая ошибка наших клиентов, практически каждую неделю мы сталкиваемся с подобными
+            ситуациями, если Вы не хотите рисковать и Вам нужны изделия точно в размер, смело обращайтесь к нам и мы
+            пришлем замерщика. Цены за замер оговариваются индивидуально, все зависит от расстояния, объекта замера и
+            др.
           </div>
         </div>
       </div>
@@ -249,9 +252,9 @@
       <div class="coloring__description">
         <h3 class="title coloring__title">Покрасим в порошок</h3>
         <div class="subtitle coloring__subtitle">
-          По своей сути рыбатекст является альтернативой традиционному
-          lorem ipsum, который вызывает у некторых людей недоумение
-          при попытках прочитать рыбу текст.
+          На нашем производстве мы используем либо стандартные цвета листового проката, либо красим в порошок. Если
+          необходимо подобрать нестандартный цвет, тогда Вам по адресу. Красим любые изделия(не только листовой прокат
+          или доборные элементы) длиной до 6 метров.
         </div>
         <!-- <a href="#" class="parallax__more">подробнее</a> -->
         <a href="https://wa.clck.bar/79216518208" class="parallax__more">заказать</a>
@@ -265,9 +268,8 @@
       <div class="delivery__description">
         <h3 class="title delivery__title">доставка</h3>
         <div class="subtitle delivery__subtitle">
-          По своей сути рыбатекст является альтернативой традиционному
-          lorem ipsum, который вызывает у некторых людей недоумение
-          при попытках прочитать рыбу текст.
+          У нас своя логистика, поэтому риск поцарапать изделия или испортить личный транспорт минимален. В противном
+          случае мы несем за это ответственность!
         </div>
       </div>
 
@@ -285,10 +287,14 @@
           <span>m78</span><br>metalloprokat
         </div>
         <h4 class="price__h4">И, наконец, цена</h4>
-        <div class="price__description">От 1099 руб</div>
+        <div class="price__description">От 99 руб</div>
+        <div class="price__text">
+          Чтобы просчитать Ваши изделия, отправьте заявку в whatsApp с чертежами(можно от руки) и мы сделаем Вам быстрый
+          расчет и максимально-короткие сроки производства!
+        </div>
         <a href="#">
           <!-- <button class="price__btn">Открыть калькулятор</button> -->
-          <a class="price__btn" href="https://wa.clck.bar/79216518208">Уточнить в whatsapp</a>
+          <a class="price__btn" href="https://wa.clck.bar/79216518208">Перейти в whatsapp</a>
         </a>
       </div>
 
@@ -307,31 +313,25 @@
 <nav class="points nav">
   <ul>
     <li>
-      <a class="point active" href="#first">&#8213; &#160;01</a>
+      <a class="points__item active" href="#first">&#8213; &#160;01</a>
     </li>
     <li>
-      <a class="point" href="#goods">&#8213; &#160;02</a>
+      <a class="points__item" href="#goods">&#8213; &#160;02</a>
     </li>
     <li>
-      <a class="point" href="#galvanization">&#8213; &#160;03</a>
+      <a class="points__item" href="#galvanization">&#8213; &#160;03</a>
     </li>
     <li>
-      <a class="point" href="#painted">&#8213; &#160;04</a>
+      <a class="points__item" href="#froze">&#8213; &#160;04</a>
     </li>
     <li>
-      <a class="point" href="#stainless">&#8213; &#160;05</a>
+      <a class="points__item" href="#coloring">&#8213; &#160;05</a>
     </li>
     <li>
-      <a class="point" href="#froze">&#8213; &#160;06</a>
+      <a class="points__item" href="#delivery">&#8213; &#160;06</a>
     </li>
     <li>
-      <a class="point" href="#coloring">&#8213; &#160;07</a>
-    </li>
-    <li>
-      <a class="point" href="#delivery">&#8213; &#160;08</a>
-    </li>
-    <li>
-      <a class="point" href="#price">&#8213; &#160;09</a>
+      <a class="points__item" href="#price">&#8213; &#160;07</a>
     </li>
   </ul>
 </nav>

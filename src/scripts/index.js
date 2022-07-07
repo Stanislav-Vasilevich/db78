@@ -1,11 +1,12 @@
 const menu = document.querySelector('.menu');
-const hamburger = document.querySelector('.hamburger');
-const point = document.querySelector('.menu__close');
+const menuItem = document.querySelectorAll('.menu__item');
+const hamburger = document.querySelector('.header__hamburger');
+const menuClose = document.querySelector('.menu__close');
 const iconCart = document.querySelector('.icon__cart');
 const numIconCart = iconCart.querySelector('span');
 const iconWhatsApp = document.querySelector('.icon__whatsapp');
-const whatsAppText = iconWhatsApp.querySelector('.whatsapp');
-const points = document.querySelectorAll('.point');
+const whatsAppText = iconWhatsApp.querySelector('.icon__whatsapp-link');
+const points = document.querySelectorAll('.points__item');
 const goodsNames = document.querySelectorAll('.goods__name');
 const first = document.querySelector('.first');
 const goods = document.querySelector('.goods');
@@ -16,8 +17,15 @@ hamburger.addEventListener('click', () => {
 });
 
 // закрыть мобильное меню
-point.addEventListener('click', () => {
+menuClose.addEventListener('click', () => {
   menu.classList.remove('menu_active');
+});
+
+// закрыть мобильное меню
+menuItem.forEach(i => {
+  i.addEventListener('click', () => {
+    menu.classList.remove('menu_active');
+  });
 });
 
 // меняю иконку корзины по нажатию
@@ -41,7 +49,7 @@ iconCart.addEventListener('click', () => {
 
 // открыть WhatsApp
 iconWhatsApp.addEventListener('click', () => {
-  whatsAppText.classList.toggle('whatsapp_active');
+  whatsAppText.classList.toggle('icon__whatsapp-link_active');
 })
 
 // поставить point
