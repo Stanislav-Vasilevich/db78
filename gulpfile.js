@@ -30,8 +30,12 @@ const paths = {
     dest: 'dist/css/'
   },
   scripts: {
-    src: ['src/scripts/**/*.js'],
+    src: ['src/scripts/*.js'],
     dest: 'dist/js/'
+  },
+  indexScripts: {
+    src: ['src/scripts/index/*.js'],
+    dest: 'dist/js/index'
   },
   images: {
     src: 'src/img/**',
@@ -93,21 +97,37 @@ function styles() {
   .pipe(browsersync.stream())
 }
 
-// JS
-function scripts() {
-  return gulp.src(paths.scripts.src)
+// index JS
+function indexScripts() {
+  return gulp.src(paths.indexScripts.src)
   .pipe(sourcemaps.init())
   .pipe(babel({
     presets: ['@babel/env']
   }))
   .pipe(uglify())
-  .pipe(concat('main.min.js'))
   .pipe(sourcemaps.write('.'))
   .pipe(size({
     showFiles:true
   }))
-  .pipe(gulp.dest(paths.scripts.dest))
+  .pipe(gulp.dest(paths.indexScripts.dest))
   .pipe(browsersync.stream())
+}
+
+// JS
+function scripts() {
+  return gulp.src(paths.scripts.src)
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(concat('main.min.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(size({
+      showFiles:true
+    }))
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browsersync.stream())
 }
 
 // Сжатие изображений
@@ -145,6 +165,7 @@ function watch() {
   gulp.watch(paths.allHTML.src, allHTML)
   gulp.watch(paths.styles.src, styles)
   gulp.watch(paths.scripts.src, scripts)
+  gulp.watch(paths.indexScripts.src, indexScripts)
   gulp.watch(paths.images.src, img)
   gulp.watch(paths.fonts.src, fonts)
 }
@@ -155,9 +176,10 @@ exports.html = html
 exports.allHTML = allHTML
 exports.styles = styles
 exports.scripts = scripts
+exports.indexScripts = indexScripts
 exports.img = img
 exports.fonts = fonts
 exports.watch = watch
 
-// Таск, который выполняется по команде gulp
-exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, img, fonts), watch)
+// Задачи, которые выполняется по команде gulp
+exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, indexScripts, img, fonts), watch)
