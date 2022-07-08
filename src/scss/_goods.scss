@@ -36,10 +36,11 @@
   }
   &__item-1 {
     grid-area: one;
-    //animation: random;
+    animation: rotateY 4s linear infinite;
   }
   &__item-2 {
     grid-area: two;
+    animation: rotateX 4s linear infinite;
   }
   &__item-3 {
     grid-area: three;
