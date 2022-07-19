@@ -33,9 +33,9 @@ const paths = {
     src: ['src/scripts/*.js'],
     dest: 'dist/js/'
   },
-  indexScripts: {
-    src: ['src/scripts/index/*.js'],
-    dest: 'dist/js/index'
+  libsScripts: {
+    src: ['src/scripts/libs/*.js'],
+    dest: 'dist/js/libs'
   },
   images: {
     src: 'src/img/**',
@@ -74,7 +74,7 @@ function allHTML() {
   .pipe(browsersync.stream())
 }
 
-// CSS и SCSS
+// SCSS
 function styles() {
   return gulp.src(paths.styles.src)
   .pipe(sourcemaps.init())
@@ -97,19 +97,10 @@ function styles() {
   .pipe(browsersync.stream())
 }
 
-// index JS
-function indexScripts() {
-  return gulp.src(paths.indexScripts.src)
-  .pipe(sourcemaps.init())
-  .pipe(babel({
-    presets: ['@babel/env']
-  }))
-  .pipe(uglify())
-  .pipe(sourcemaps.write('.'))
-  .pipe(size({
-    showFiles:true
-  }))
-  .pipe(gulp.dest(paths.indexScripts.dest))
+// libs JS
+function libsScripts() {
+  return gulp.src(paths.libsScripts.src)
+  .pipe(gulp.dest(paths.libsScripts.dest))
   .pipe(browsersync.stream())
 }
 
@@ -165,7 +156,7 @@ function watch() {
   gulp.watch(paths.allHTML.src, allHTML)
   gulp.watch(paths.styles.src, styles)
   gulp.watch(paths.scripts.src, scripts)
-  gulp.watch(paths.indexScripts.src, indexScripts)
+  gulp.watch(paths.libsScripts.src, libsScripts)
   gulp.watch(paths.images.src, img)
   gulp.watch(paths.fonts.src, fonts)
 }
@@ -176,10 +167,10 @@ exports.html = html
 exports.allHTML = allHTML
 exports.styles = styles
 exports.scripts = scripts
-exports.indexScripts = indexScripts
+exports.libsScripts = libsScripts
 exports.img = img
 exports.fonts = fonts
 exports.watch = watch
 
 // Задачи, которые выполняется по команде gulp
-exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, indexScripts, img, fonts), watch)
+exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, img, fonts), watch)
