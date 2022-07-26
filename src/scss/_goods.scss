@@ -15,7 +15,7 @@
     display: grid;
     grid-template-columns: repeat(4, 280px);
     grid-template-rows: repeat(5, 210px);
-    gap: 11px;
+    gap: 10px;
     grid-template-areas:
       '. two . text'
       'one two three text'
@@ -24,6 +24,7 @@
       '. . six .';
   }
   &__item {
+    overflow: hidden;
     width: 280px;
     cursor: pointer;
     &:hover {
