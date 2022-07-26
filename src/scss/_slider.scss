@@ -5,5 +5,13 @@
 
   img {
     height: 430px;
+    filter: grayscale(100%);
+    transition: 1s all;
+  }
+
+  &:hover {
+    img {
+      filter: grayscale(0%);
+    }
   }
 }
