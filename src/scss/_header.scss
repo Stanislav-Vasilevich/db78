@@ -6,6 +6,22 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
+  &_black {
+    background: black;
+  }
+  &_full {
+    width: 100%;
+  }
+  &__content {
+    width: 1440px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
   &__row {
     height: 100%;
     display: flex;

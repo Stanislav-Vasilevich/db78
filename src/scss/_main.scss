@@ -1,0 +1,7 @@
+main {
+  &_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 100vh);
+  }
+}
