@@ -7,6 +7,12 @@
 	font-family: 'Gotham Pro';
 	font-size: 18px;
 	background: #fdfcfb;
+
+	&_otlivy {
+		font-size: 22px;
+		font-weight: 300;
+		line-height: 30px;
+	}
 }
 h1 {
 	font-size: 42px;
@@ -32,4 +38,8 @@ a {
 
 section {
 	overflow: hidden;
+}
+
+.section {
+	margin: 0 0 20px;
 }

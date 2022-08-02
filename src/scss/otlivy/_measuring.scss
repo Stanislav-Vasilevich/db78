@@ -1,0 +1,38 @@
+.measuring {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #131514;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    padding: 0 0 0 50px;
+  }
+
+  &__title {
+    color: rgb(215, 216, 218);
+    font-size: 48px;
+  }
+
+  &__text {
+    color: rgb(215, 216, 218);
+  }
+}
