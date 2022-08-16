@@ -35,7 +35,9 @@ section {
 }
 
 .section {
-	margin: 0 0 20px;
+	&_bottom {
+		margin: 0 0 20px;
+	}
 }
 
 p {

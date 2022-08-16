@@ -1,16 +1,30 @@
 .title {
   font-size: 85px;
-  line-height: 60px;
+  line-height: 1.2;
   color: #EBEBEB;
+
   &_black {
     font-weight: 700;
     font-size: 70px;
     line-height: 53px;
     color: #101010;
   }
-  &_otlivy {
+
+  &__good {
+    color: #e6e6e6;
     font-size: 48px;
+    line-height: 1;
   }
 }
 
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 36px;
+  }
+}
 
+@media screen and (max-width: 414px) {
+  .title {
+    font-size: 30px;
+  }
+}

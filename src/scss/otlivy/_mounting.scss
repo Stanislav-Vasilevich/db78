@@ -16,4 +16,37 @@
   &__title {
     font-weight: 300;
   }
+
+  &__button {
+    border: 1px solid black;
+    transition: 1s all;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mounting {
+    &__content {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .mounting {
+    &__content {
+      padding: 0 0 15% 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .mounting {
+    &__content {
+      padding: 0 0 15% 15px;
+    }
+  }
 }

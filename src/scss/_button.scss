@@ -1,0 +1,14 @@
+.button {
+  align-self: start;
+  border: 1px solid red;
+  border-radius: 20px;
+  color: white;
+  background: transparent;
+  padding: 10px 30px;
+  transition: .4s all;
+
+  &:hover {
+    border: 1px solid white;
+    color: white;
+  }
+}

@@ -12,14 +12,29 @@
     background: linear-gradient(87deg, rgba(0,0,0,0.5858937324929971) 50%, rgba(255,255,255,0) 100%);
     padding: 50px 50px 10%;
   }
+}
 
-  &__title {
-    color: #e6e6e6;
-    font-size: 48px;
+@media screen and (max-width: 1140px) {
+  .window {
+    &__content {
+      width: 70%;
+    }
   }
+}
 
-  &__text {
-    color: #e6e6e6;
-    font-size: 22px;
+@media screen and (max-width: 800px) {
+  .window {
+    &__content {
+      width: 100%;
+      padding: 50px 30px 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .window {
+    &__content {
+      padding: 50px 15px 10%;
+    }
   }
 }

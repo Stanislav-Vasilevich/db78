@@ -14,13 +14,41 @@
   }
 
   &__title {
-    font-size: 56px;
     margin: 0 0 20px;
   }
 
   &__text {
     width: 80%;
-    color: #aaaaaa;
-    font-size: 30px;
+  }
+
+  &__button {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .fence {
+    &__title {
+      margin: 0 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .fence {
+    &__content {
+      padding: 30px;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .fence {
+    &__content {
+      padding: 15px;
+    }
   }
 }

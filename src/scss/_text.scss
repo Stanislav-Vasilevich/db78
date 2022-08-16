@@ -1,0 +1,32 @@
+.text {
+  color: #e6e6e6;
+  font-size: 22px;
+  margin: 0 0 20px;
+}
+
+@media screen and (max-width: 1140px) {
+  .text {
+    p {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .text {
+    p {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .text {
+    p {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+}

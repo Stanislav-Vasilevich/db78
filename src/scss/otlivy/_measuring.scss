@@ -22,17 +22,36 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     height: 100%;
     padding: 0 0 0 50px;
   }
+}
 
-  &__title {
-    color: rgb(215, 216, 218);
-    font-size: 48px;
+@media screen and (max-width: 800px) {
+  .measuring {
+    display: flex;
+    flex-direction: column;
+    &__bg {
+      position: relative;
+      top: 0;
+      left: 0;
+      align-self: end;
+    }
+    &__content {
+      width: 100%;
+      padding: 0 0 0 30px;
+    }
   }
+}
 
-  &__text {
-    color: rgb(215, 216, 218);
+@media screen and (max-width: 800px) {
+  .measuring {
+    &__content {
+      padding: 0 15px;
+    }
+    &__button {
+      margin: 0 0 20px;
+    }
   }
 }
