@@ -15,6 +15,10 @@
   &__text {
     width: 50%;
   }
+
+  &_filter {
+    filter: brightness(10%) contrast(80%);
+  }
 }
 
 @media screen and (max-width: 1024px) {

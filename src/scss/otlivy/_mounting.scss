@@ -25,6 +25,10 @@
       color: black;
     }
   }
+
+  &_filter {
+    filter: brightness(30%) contrast(80%);
+  }
 }
 
 @media screen and (max-width: 1024px) {
