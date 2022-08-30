@@ -18,11 +18,15 @@
   }
 
   &__button {
-    border: 1px solid black;
+    border: 1px solid white;
+    color: white;
+    background: black;
     transition: 1s all;
 
     &:hover {
       color: black;
+      background: white;
+      border: 1px solid black;
     }
   }
 
