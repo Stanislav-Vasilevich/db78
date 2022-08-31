@@ -12,6 +12,10 @@
     align-items: end;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 67%);
     padding: 0 90px 15%;
+
+    &_bottom {
+      padding: 0 90px 5%;
+    }
   }
   &__text {
     margin: 0 0 10px;
