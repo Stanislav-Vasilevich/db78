@@ -1,0 +1,53 @@
+.top {
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid grey;
+  z-index: 3;
+  transition: .4s all;
+
+  &::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: grey;
+    position: absolute;
+    top: 48%;
+    left: 21%;
+    transform: rotate(-45deg);
+    transition: .4s all;
+  }
+
+  &::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: grey;
+    position: absolute;
+    top: 48%;
+    right: 21%;
+    transform: rotate(45deg);
+    transition: .4s all;
+  }
+
+  &:hover {
+    border: 1px solid red;
+    &::before {
+      background: red;
+
+    }
+
+    &::after {
+      background: red;
+    }
+  }
+
+  &_hidden {
+    display: none;
+  }
+}

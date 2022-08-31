@@ -1,8 +1,10 @@
 // animated
 @import 'animated';
 
+// style
 @import 'normalize';
 @import 'default';
+@import 'top';
 @import 'keyframes';
 @import 'background';
 @import 'fonts';
@@ -29,6 +31,7 @@
 
 // page contacts
 @import 'contacts';
+
 // page otlivy
 @import 'otlivy/bg';
 @import 'otlivy/window';
