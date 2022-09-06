@@ -38,6 +38,10 @@ const paths = {
     src: ['src/scripts/libs/*.js'],
     dest: 'dist/js/libs'
   },
+  mainScripts: {
+    src: 'src/scripts/main/*.js',
+    dest: 'dist/js/main'
+  },
   images: {
     src: 'src/img/**',
     dest: 'dist/img/'
@@ -109,6 +113,13 @@ function libsScripts() {
   .pipe(browsersync.stream())
 }
 
+// main JS (главная страница)
+function mainScripts() {
+  return gulp.src(paths.mainScripts.src)
+  .pipe(gulp.dest(paths.mainScripts.dest))
+  .pipe(browsersync.stream())
+}
+
 // JS
 function scripts() {
   return gulp.src(paths.scripts.src)
@@ -173,6 +184,7 @@ function watch() {
   gulp.watch(paths.styles.src, styles)
   gulp.watch(paths.scripts.src, scripts)
   gulp.watch(paths.libsScripts.src, libsScripts)
+  gulp.watch(paths.mainScripts.src, mainScripts)
   gulp.watch(paths.images.src, img)
   gulp.watch(paths.fonts.src, fonts)
   gulp.watch(paths.sitemap.src, sitemap)
@@ -185,10 +197,11 @@ exports.allHTML = allHTML
 exports.styles = styles
 exports.scripts = scripts
 exports.libsScripts = libsScripts
+exports.mainScripts = mainScripts
 exports.img = img
 exports.fonts = fonts
 exports.watch = watch
 exports.sitemap = sitemap
 
 // Задачи, которые выполняется по команде gulp
-exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, img, fonts), sitemap, watch)
+exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, mainScripts, img, fonts), sitemap, watch)

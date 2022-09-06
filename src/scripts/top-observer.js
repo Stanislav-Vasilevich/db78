@@ -1,17 +1,17 @@
-const galvanization = document.querySelector('#galvanization');
-const buttonTop = document.querySelector('.top');
+// установить динамически аттрибут href для первой секции
+buttonTop.setAttribute('href', `#${idFirstSection}`);
 
-const options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
+// отслеживать scroll для кнопки наверх
+document.addEventListener('scroll', trackScroll);
+
+function trackScroll() {
+  let scrolled = window.pageYOffset;
+  let coords = document.documentElement.clientHeight;
+
+  if (scrolled > coords) {
+    buttonTop.classList.remove('top_hidden');
+  }
+  if (scrolled < coords) {
+    buttonTop.classList.add('top_hidden');
+  }
 }
-const callback = function(entries, observer) {
-  entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      buttonTop.classList.toggle('top_hidden');
-    }
-  })
-};
-const observer = new IntersectionObserver(callback, options);
-observer.observe(galvanization);

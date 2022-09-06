@@ -1,17 +1,14 @@
-// menu
-window.addEventListener('scroll', () => {
-  let scrollDistance = window.scrollY;
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-  document.querySelectorAll('.section').forEach((el, i) => {
+for(let anchor of anchors) {
+  anchor.addEventListener('click', (e) => {
+    e.preventDefault();
 
-    if (el.offsetTop - document.querySelector('.nav').clientHeight <= scrollDistance) {
-      document.querySelectorAll('.nav a').forEach((el) => {
-        if (el.classList.contains('active')) {
-          el.classList.remove('active');
-        }
-      });
+    const blockID = anchor.getAttribute('href');
 
-      document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('active');
-    }
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
   });
-});
+}
