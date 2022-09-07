@@ -53,6 +53,10 @@ const paths = {
   sitemap: {
     src: 'src/**/*.html',
     dest: 'dist/sitemap/'
+  },
+  robots: {
+    src: 'src/robots.txt',
+    dest: 'dist/'
   }
 }
 
@@ -171,6 +175,12 @@ function sitemap() {
     .pipe(gulp.dest(paths.sitemap.dest))
 }
 
+// robots
+function robots() {
+  return gulp.src(paths.robots.src)
+    .pipe(gulp.dest(paths.robots.dest))
+}
+
 // Отслеживание изменений в файлах и запуск лайв сервера
 function watch() {
   browsersync.init({
@@ -188,6 +198,7 @@ function watch() {
   gulp.watch(paths.images.src, img)
   gulp.watch(paths.fonts.src, fonts)
   gulp.watch(paths.sitemap.src, sitemap)
+  gulp.watch(paths.robots.src, robots)
 }
 
 // Таски для ручного запуска с помощью gulp clean, gulp html и т.д.
@@ -202,6 +213,7 @@ exports.img = img
 exports.fonts = fonts
 exports.watch = watch
 exports.sitemap = sitemap
+exports.robots = robots
 
 // Задачи, которые выполняется по команде gulp
-exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, mainScripts, img, fonts), sitemap, watch)
+exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, mainScripts, img, fonts), sitemap, robots, watch)
