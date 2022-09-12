@@ -52,10 +52,14 @@ const paths = {
   },
   sitemap: {
     src: 'src/**/*.html',
-    dest: 'dist/sitemap/'
+    dest: 'dist/'
   },
   robots: {
     src: 'src/robots.txt',
+    dest: 'dist/'
+  },
+  favicon: {
+    src: 'src/favicon.svg',
     dest: 'dist/'
   }
 }
@@ -181,6 +185,12 @@ function robots() {
     .pipe(gulp.dest(paths.robots.dest))
 }
 
+// favicon
+function favicon() {
+  return gulp.src(paths.favicon.src)
+    .pipe(gulp.dest(paths.favicon.dest))
+}
+
 // Отслеживание изменений в файлах и запуск лайв сервера
 function watch() {
   browsersync.init({
@@ -197,6 +207,7 @@ function watch() {
   gulp.watch(paths.mainScripts.src, mainScripts)
   gulp.watch(paths.images.src, img)
   gulp.watch(paths.fonts.src, fonts)
+  gulp.watch(paths.favicon.src, favicon)
   gulp.watch(paths.sitemap.src, sitemap)
   gulp.watch(paths.robots.src, robots)
 }
@@ -211,9 +222,10 @@ exports.libsScripts = libsScripts
 exports.mainScripts = mainScripts
 exports.img = img
 exports.fonts = fonts
+exports.favicon = favicon
 exports.watch = watch
 exports.sitemap = sitemap
 exports.robots = robots
 
 // Задачи, которые выполняется по команде gulp
-exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, mainScripts, img, fonts), sitemap, robots, watch)
+exports.default = gulp.series(clean, html, allHTML, gulp.parallel(styles, scripts, libsScripts, mainScripts, img, fonts), sitemap, robots, favicon, watch)
